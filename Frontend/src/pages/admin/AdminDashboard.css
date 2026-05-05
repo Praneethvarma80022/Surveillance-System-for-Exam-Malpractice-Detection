@@ -1,0 +1,347 @@
+/* Variables for brand consistency */
+:root {
+  --header-gradient: linear-gradient(135deg, #4f46e5 0%, #a855f7 100%);
+  --sidebar-width: 260px;
+  --bg-main: #f3f6ff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+}
+
+/* Main Dashboard Page Container */
+.admin-dashboard {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background: #f8fafc;
+  overflow-y: auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* --- 1. Header Section --- */
+.dashboard-header {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.dashboard-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0;
+  color: #1e293b;
+}
+
+.dashboard-subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 8px 0 0 0;
+  font-weight: 400;
+}
+
+.dashboard-status {
+  display: flex;
+  gap: 12px;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #f1f5f9;
+  color: #1e293b;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* --- 2. Quick Stats Grid --- */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1400px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.stat-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.stat-card:hover { 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-label { 
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: #64748b !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value { 
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 8px 0 0 0;
+  color: #1e293b !important;
+}
+
+.stat-icon {
+  align-self: flex-end;
+  opacity: 0.1;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Color Accents for Different Cards */
+.stat-card-blue { border-left: 3px solid #3b82f6; }
+.stat-card-green { border-left: 3px solid #22c55e; }
+.stat-card-purple { border-left: 3px solid #8b5cf6; }
+.stat-card-orange { border-left: 3px solid #f97316; }
+.stat-card-cyan { border-left: 3px solid #06b6d4; }
+.stat-card-red { border-left: 3px solid #ef4444; }
+.stat-card-indigo { border-left: 3px solid #6366f1; }
+
+/* --- 3. Quick Action Cards --- */
+.dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.action-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.action-card:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.action-card-icon {
+  width: 40px;
+  height: 40px;
+  color: #6366f1;
+  margin-bottom: 1rem;
+}
+
+.action-card-title { 
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.action-card-desc { 
+  font-size: 0.875rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* --- 4. Recent Violations & System Status --- */
+.dashboard-section {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .dashboard-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+.dashboard-card-content {
+  position: relative;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #64748b;
+}
+
+.empty-state svg {
+  color: #cbd5e1;
+  margin: 0 auto 1rem;
+}
+
+/* Violation List Styles */
+.violation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.violation-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.violation-item:hover {
+  border-color: #f87171;
+}
+
+.violation-title { 
+  font-weight: 600;
+  color: #991b1b;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.violation-reason { 
+  font-size: 0.8rem;
+  color: #b91c1c;
+  margin-top: 4px;
+}
+
+.violation-badge {
+  background: #ef4444;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* System Status Styles */
+.status-check {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.status-check:last-child { border-bottom: none; }
+
+.status-indicator-circle {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.status-text { 
+  flex: 1;
+  font-weight: 500;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.status-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #16a34a;
+  background: #f0fdf4;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #bbf7d0;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+  .dashboard-stats { grid-template-columns: repeat(3, 1fr); }
+  .dashboard-actions { grid-template-columns: repeat(2, 1fr); }
+  .dashboard-section { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .dashboard-stats { grid-template-columns: repeat(2, 1fr); }
+  .dashboard-actions { grid-template-columns: 1fr; }
+  .dashboard-header { padding: 1.5rem; }
+  .dashboard-title { font-size: 1.5rem; }
+}

@@ -1,0 +1,504 @@
+.admin-exams {
+    width: 100%;
+    height: 100%;
+    background-color: #f8fafc;
+    padding: 2rem;
+    overflow-y: auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+.exams-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.exams-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 2.5rem;
+}
+
+.exams-header-h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.exams-header-subtitle {
+    color: #64748b;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.exams-header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Main Table Card */
+.exams-table-card {
+    border: none;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+}
+
+.exams-table-card .relative {
+    /* For Shadcn Table responsiveness */
+    overflow-x: auto;
+}
+
+/* Status Badges Customization */
+.exams-table-card .inline-flex {
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: capitalize;
+}
+
+/* Dialog & Form Styling */
+.max-h-\[90vh\] {
+    /* Custom Scrollbar for the Questions list in the dialog */
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+.max-h-\[90vh\]::-webkit-scrollbar {
+    width: 6px;
+}
+
+.max-h-\[90vh\]::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* Question Cards in Dialog */
+.space-y-4 .p-4 {
+    border: 1px solid #e2e8f0;
+    background-color: #ffffff;
+    transition: box-shadow 0.2s;
+}
+
+.space-y-4 .p-4:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Tabs Trigger Customization */
+[data-state="active"].grid-cols-4 {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Actions Column */
+.flex.gap-2 button {
+    transition: all 0.2s;
+}
+
+.flex.gap-2 button:hover {
+    transform: scale(1.05);
+}
+
+/* Credential Cards Styling - NEW 3-COLUMN LAYOUT */
+.credentials-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.credential-card-new {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 32px;
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 28px 32px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    align-items: start;
+}
+
+.credential-card-new:hover {
+    border-color: #6366f1;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Left Section */
+.credential-section-left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.credential-exam-title-new {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.credential-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.credential-badge-active {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.credential-badge-inactive {
+    display: inline-flex;
+    align-items: center;
+    background: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.credential-usage-text {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* Middle Section - Form Fields */
+.credential-section-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.credential-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.credential-field-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #64748b;
+    font-weight: 700;
+    margin: 0;
+}
+
+.credential-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.credential-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #1e293b;
+    background: #f8fafc;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.credential-input:focus {
+    outline: none;
+    border-color: #6366f1;
+    background: white;
+}
+
+.credential-icon-btn {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.credential-icon-btn:hover {
+    background: #e2e8f0;
+    color: #475569;
+    border-color: #94a3b8;
+}
+
+/* Right Section - Actions */
+.credential-section-right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.credential-action-btn {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+}
+
+.credential-btn-toggle-new {
+    background: #f1f5f9;
+    border: 2px solid #cbd5e1;
+    color: #475569;
+}
+
+.credential-btn-toggle-new:hover {
+    background: #e2e8f0;
+    border-color: #94a3b8;
+    transform: scale(1.02);
+}
+
+.credential-btn-delete-new {
+    background: #fee2e2;
+    border: 2px solid #fca5a5;
+    color: #dc2626;
+}
+
+.credential-btn-delete-new:hover {
+    background: #fecaca;
+    border-color: #f87171;
+    transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .credential-card-new {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .credential-section-right {
+        flex-direction: row;
+    }
+    
+    .credential-action-btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .credential-card-new {
+        padding: 20px 24px;
+    }
+    
+    .credential-section-right {
+        flex-direction: column;
+    }
+}
+
+/* OLD STYLES - Keep for backward compatibility */
+.credential-card {
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.credential-card:hover {
+    border-color: #6366f1;
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+    transform: translateY(-4px);
+}
+
+.credential-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.credential-exam-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0 0 0.85rem 0;
+    color: #1e293b;
+    line-height: 1.4;
+}
+
+.credential-status-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.credential-active-badge {
+    background: #dcfce7;
+    color: #16a34a;
+    border: 1px solid #86efac;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.credential-inactive-badge {
+    background: #f1f5f9;
+    color: #64748b;
+    border: 1px solid #cbd5e1;
+    padding: 0.25rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.credential-usage {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.credential-details-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.credential-detail-row {
+    margin-bottom: 1rem;
+}
+
+.credential-detail-row:last-child {
+    margin-bottom: 0;
+}
+
+.credential-detail-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.credential-detail-value {
+    font-size: 0.98rem;
+    font-family: 'Courier New', monospace;
+    font-weight: 600;
+    color: #1e293b;
+    letter-spacing: 0.5px;
+}
+
+.credential-password-value {
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.credential-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.credential-btn-toggle {
+    flex: 1;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.credential-btn-toggle:hover {
+    background: #e2e8f0;
+    border-color: #94a3b8;
+    transform: scale(1.02);
+}
+
+.credential-btn-delete {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #dc2626;
+    font-weight: 600;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.credential-btn-delete:hover {
+    background: #fecaca;
+    border-color: #f87171;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .exams-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .exams-header-actions {
+        width: 100%;
+    }
+    
+    .exams-header-actions button {
+        flex: 1;
+    }
+}

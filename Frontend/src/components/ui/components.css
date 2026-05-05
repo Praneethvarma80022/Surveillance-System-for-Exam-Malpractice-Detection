@@ -1,0 +1,460 @@
+/* UI Components Styles */
+
+/* Button Component */
+.ui-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.15s ease;
+  background-color: #3b82f6;
+  color: white;
+}
+
+.ui-button:hover {
+  background-color: #2563eb;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ui-button:active {
+  transform: scale(0.95);
+}
+
+.ui-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Input Component */
+.ui-input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.ui-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Card Component */
+.ui-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  overflow: hidden;
+}
+
+.ui-card-header {
+  padding: 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.ui-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.ui-card-content {
+  padding: 20px;
+}
+
+/* Badge Component */
+.ui-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 9999px;
+  background-color: #e0e7ff;
+  color: #4f46e5;
+}
+
+/* Label Component */
+.ui-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* Alert Component */
+.ui-alert {
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.ui-alert-info {
+  background-color: #eff6ff;
+  color: #0c4a6e;
+  border: 1px solid #bfdbfe;
+}
+
+.ui-alert-destructive {
+  background-color: #fef2f2;
+  color: #7f1d1d;
+  border: 1px solid #fecaca;
+}
+
+.ui-alert-description {
+  font-size: 14px;
+}
+
+/* Tabs Component */
+.ui-tabs {
+  width: 100%;
+}
+
+.ui-tabs-list {
+  display: flex;
+  padding: 4px;
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  gap: 0;
+}
+
+.ui-tabs-trigger {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #64748b;
+  transition: all 0.2s ease;
+}
+
+.ui-tabs-trigger:hover {
+  color: #475569;
+}
+
+.ui-tabs-trigger-active {
+  background-color: white;
+  color: #3b82f6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.ui-tabs-content {
+  margin-top: 16px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Textarea Component */
+.ui-textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.ui-textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* RadioGroup Component */
+.ui-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ui-radio-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.ui-radio-item input[type="radio"] {
+  cursor: pointer;
+}
+
+/* Dialog Component */
+.ui-dialog-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 40;
+}
+
+.ui-dialog-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.ui-dialog-header {
+  margin-bottom: 16px;
+}
+
+.ui-dialog-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Table Components */
+.ui-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ui-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ui-table-header {
+  background-color: #f8fafc;
+}
+
+.ui-table-body {
+  background-color: white;
+}
+
+.ui-table-head {
+  text-align: left;
+  padding: 16px;
+  font-weight: 600;
+  font-size: 13px;
+  color: #475569;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ui-table-row {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ui-table-row:hover {
+  background-color: #f8fafc;
+}
+
+.ui-table-cell {
+  padding: 16px;
+  font-size: 14px;
+  color: #1e293b;
+}
+
+/* Switch Component */
+.ui-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.ui-switch input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.switch-label {
+  display: none;
+}
+
+/* Select Components */
+.ui-select {
+  position: relative;
+  width: 100%;
+}
+
+.ui-select-trigger {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 14px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.ui-select-trigger:hover {
+  border-color: #94a3b8;
+}
+
+.ui-select-trigger:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.select-arrow {
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.select-value {
+  flex: 1;
+}
+
+.ui-select-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 4px;
+  background-color: white;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  max-height: 192px;
+  overflow-y: auto;
+}
+
+.ui-select-item {
+  width: 100%;
+  text-align: left;
+  padding: 10px 12px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ui-select-item:hover {
+  background-color: #f1f5f9;
+}
+
+.ui-select-item-selected {
+  background-color: #e0e7ff;
+  color: #4338ca;
+  font-weight: 600;
+}
+
+.ui-select-item:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Popover Components */
+.ui-popover {
+  position: relative;
+  display: inline-block;
+}
+
+.ui-popover-content {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  padding: 12px;
+  min-width: 200px;
+}
+
+/* Container Component */
+.ui-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .ui-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ui-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Stack Component */
+.ui-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Grid Component */
+.ui-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .ui-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Icon Button Component */
+.ui-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ui-icon-button:hover {
+  background-color: #f1f5f9;
+}
+
+.ui-icon-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}

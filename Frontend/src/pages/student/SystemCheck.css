@@ -1,0 +1,585 @@
+/* Student System Check Styles */
+
+.system-check {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  display: block;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin-top: 56px;
+}
+
+.system-check-loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin-top: 56px;
+}
+
+.system-check-loading-content {
+  text-align: center;
+}
+
+.system-check-loading-content svg {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 16px;
+  color: #2563eb;
+}
+
+.system-check-loading-text {
+  color: #475569;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.system-check-loader-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 16px;
+  color: #2563eb;
+  animation: spin 1s linear infinite;
+}
+
+.system-check-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.system-check-header {
+  text-align: center;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.system-check-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.3);
+}
+
+.icon-large {
+  width: 32px;
+  height: 32px;
+}
+
+.system-check-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1f2937;
+  margin: 0;
+}
+
+.system-check-subtitle {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.system-check-exam-card {
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-description {
+  color: #6b7280;
+  font-size: 0.95rem;
+  margin: 8px 0 0 0;
+}
+
+.exam-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.exam-info-card {
+  text-align: center;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.exam-info-duration {
+  background: #eff6ff;
+}
+
+.exam-info-questions {
+  background: #f3e8ff;
+}
+
+.exam-info-points {
+  background: #f0fdf4;
+}
+
+.exam-info-icon {
+  width: 24px;
+  height: 24px;
+  color: #2563eb;
+}
+
+.exam-info-label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.exam-info-value {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.system-check-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.system-check-requirements {
+  grid-column: 1;
+}
+
+.check-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.check-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.check-item-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.check-item-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f4f6;
+  flex-shrink: 0;
+}
+
+.check-item-icon-inner {
+  width: 20px;
+  height: 20px;
+  color: #6b7280;
+}
+
+.check-item-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 4px 0;
+  font-size: 0.95rem;
+}
+
+.check-item-message {
+  color: #6b7280;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.check-item-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.check-item-success {
+  border-left-color: #10b981;
+  background: #f0fdf4;
+}
+
+.check-item-success .check-item-icon-wrapper {
+  background: #dcfce7;
+}
+
+.check-item-success .check-item-icon-inner {
+  color: #10b981;
+}
+
+.check-item-error {
+  border-left-color: #ef4444;
+  background: #fef2f2;
+}
+
+.check-item-error .check-item-icon-wrapper {
+  background: #fee2e2;
+}
+
+.check-item-error .check-item-icon-inner {
+  color: #ef4444;
+}
+
+.check-item-pending {
+  border-left-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.check-item-pending .check-item-icon-wrapper {
+  background: #fef3c7;
+}
+
+.check-item-pending .check-item-icon-inner {
+  color: #f59e0b;
+}
+
+.check-item-loading {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.alert-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.alert-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.alert-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: #10b981;
+}
+
+.alert-error .alert-icon {
+  color: #ef4444;
+}
+
+.alert-description {
+  color: #166534;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.alert-error .alert-description {
+  color: #991b1b;
+}
+
+.demo-button {
+  width: 100%;
+  padding: 10px 16px;
+  background: white;
+  border: 2px solid #fbbf24;
+  color: #b45309;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+}
+
+.demo-button:hover {
+  background: #fffbeb;
+}
+
+.camera-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.camera-preview-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #111827;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.camera-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera-frame {
+  position: absolute;
+  inset: 16px;
+  border: 2px solid #10b981;
+  border-radius: 4px;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.frame-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #10b981;
+}
+
+.frame-top-left {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.frame-top-right {
+  top: -2px;
+  right: -2px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.frame-bottom-left {
+  bottom: -2px;
+  left: -2px;
+  border-right: none;
+  border-top: none;
+}
+
+.frame-bottom-right {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.camera-instruction {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.camera-reminders {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reminder-box {
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.reminder-title {
+  font-weight: 600;
+  color: #b45309;
+  margin: 0 0 8px 0;
+  font-size: 0.9rem;
+}
+
+.reminder-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #92400e;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.reminder-list li {
+  margin: 0;
+}
+
+.start-exam-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.start-exam-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.start-exam-button:disabled {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.button-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.button-icon.loading {
+  animation: spin 1s linear infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .system-check {
+    padding: 12px;
+    margin-top: 56px;
+  }
+
+  .system-check-header {
+    margin-bottom: 24px;
+  }
+
+  .system-check-title {
+    font-size: 1.5rem;
+  }
+
+  .system-check-subtitle {
+    font-size: 1rem;
+  }
+
+  .exam-info-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .system-check-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .system-check-requirements {
+    grid-column: 1;
+  }
+
+  .camera-card {
+    grid-column: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .system-check {
+    padding: 8px;
+    margin-top: 56px;
+  }
+
+  .system-check-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .icon-large {
+    width: 24px;
+    height: 24px;
+  }
+
+  .system-check-title {
+    font-size: 1.3rem;
+  }
+
+  .system-check-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .system-check-exam-card {
+    margin-bottom: 20px;
+  }
+
+  .check-item {
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .check-item-status {
+    align-self: flex-end;
+    margin-top: 8px;
+  }
+
+  .camera-instruction {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    bottom: 12px;
+  }
+
+  .reminder-box {
+    padding: 10px 12px;
+  }
+
+  .reminder-title {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .reminder-list {
+    font-size: 0.8rem;
+  }
+
+  .start-exam-button {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+}

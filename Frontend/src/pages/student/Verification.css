@@ -1,0 +1,327 @@
+:root {
+  --verify-bg: linear-gradient(135deg, #f0f4ff 0%, #d9e2ff 100%);
+  --brand-primary: #4f46e5;
+  --text-dark: #1e293b;
+  --text-slate: #64748b;
+  --input-bg: #ffffff;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+}
+
+/* Layout Wrapper */
+.verification-page {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  background: var(--verify-bg);
+  padding: 24px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.verification-content {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Page Header & Icon */
+.verification-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.brand-icon {
+  width: 56px;
+  height: 56px;
+  background-color: var(--brand-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+
+.brand-icon-svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+}
+
+.verification-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.verification-subtitle {
+  color: var(--text-slate);
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* Stepper Dots */
+.stepper-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: var(--brand-primary);
+  transform: scale(1.3);
+}
+
+/* Authentication Card */
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+  border: none !important;
+  margin: 0 auto;
+}
+
+/* Authentication Header */
+.auth-card-header {
+  padding: 0 0 24px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.auth-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  text-align: center;
+}
+
+.auth-subtitle {
+  color: var(--text-slate);
+  font-size: 0.95rem;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.auth-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* MFA Box Styling */
+.mfa-box-blue {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border: 2px solid #0ea5e9;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.mfa-icon-blue {
+  width: 40px;
+  height: 40px;
+  color: #0ea5e9;
+}
+
+.mfa-id {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0;
+  word-break: break-all;
+}
+
+.mfa-label {
+  font-size: 0.85rem;
+  color: var(--text-slate);
+  margin: 0;
+}
+
+.mfa-box-green {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 2px solid #22c55e;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+}
+
+.mfa-code-label {
+  font-size: 0.85rem;
+  color: var(--text-slate);
+  margin: 0 0 8px 0;
+}
+
+.mfa-code-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #22c55e;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 4px;
+}
+
+.mfa-input {
+  width: 100% !important;
+  height: 54px !important;
+  font-size: 1.5rem !important;
+  text-align: center !important;
+  letter-spacing: 8px !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  border: 2px solid #e2e8f0 !important;
+  background: #f8fafc !important;
+}
+
+.mfa-input:focus {
+  border-color: var(--brand-primary) !important;
+  outline: none;
+  background: white !important;
+}
+
+.auth-alert {
+  margin-top: 12px;
+}
+
+/* Toggle Switch (Student/Admin) */
+.login-toggle {
+  display: flex;
+  background-color: #f1f5f9;
+  border-radius: 12px;
+  padding: 6px;
+  margin-bottom: 28px;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-slate);
+  transition: all 0.2s ease;
+  border: none;
+  background: transparent;
+}
+
+.toggle-btn-active {
+  background-color: white !important;
+  color: var(--text-dark) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* Form Inputs */
+.relative {
+  margin-bottom: 16px;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.input-field {
+  width: 100%;
+  height: 52px;
+  padding-left: 44px !important;
+  border-radius: 10px !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: #fafafa !important;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  border-color: var(--brand-primary) !important;
+  outline: none;
+  background-color: #fff !important;
+}
+
+/* Primary "Continue" Button */
+.auth-btn {
+  width: 100%;
+  height: 54px;
+  background-color: var(--brand-primary) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  margin-top: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+  transition: transform 0.1s;
+}
+
+.verify-button {
+  width: 100%;
+  height: 54px;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+  color: white !important;
+  border-radius: 12px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  transition: all 0.3s ease;
+}
+
+.verify-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+}
+
+.verify-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Footer Help Text */
+.auth-footer-text {
+  text-align: center;
+  color: var(--text-slate);
+  font-size: 0.8rem;
+  margin-top: 24px;
+}
